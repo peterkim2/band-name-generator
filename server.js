@@ -6,6 +6,8 @@ var bodyparser = require('body-parser'); //body-parser module
 var app = express();
 var port = process.env.PORT || 3000;
 var Adjective = require('./lib/adjective.js'); //check to see is works.
+var Verb = require('./lib/verb.js');
+var Noun = require('./lib/noun.js');
 var getRandomWord = require('./lib/getRandomWord.js');
 
 app.use(express.static(__dirname + '/app/'));
@@ -22,22 +24,22 @@ app.use(bodyparser.urlencoded({extended: true})); //a setting in bodyparser modu
 //   this.pathetic = true;
 //   this.stinky = true;
 // } moved to own file 'adjective.js' in lib
-var Verb = function() {
-  this.run = true;
-  this.sit = true;
-  this.stand = true;
-  this.lift = true;
-  this.drop = true;
-  this.flee = true;
-}
-var Noun = function() {
-  this.dog = true;
-  this.kitty = true;
-  this.muffin = true;
-  this.sneaker = true;
-  this.sloth = true;
-  this.peach = true;
-}
+// var Verb = function() {
+//   this.run = true;
+//   this.sit = true;
+//   this.stand = true;
+//   this.lift = true;
+//   this.drop = true;
+//   this.flee = true;
+// }
+// var Noun = function() {
+//   this.dog = true;
+//   this.kitty = true;
+//   this.muffin = true;
+//   this.sneaker = true;
+//   this.sloth = true;
+//   this.peach = true;
+// }
 // make an instance of that adjective object
 var adjective = new Adjective();
 var verb = new Verb();
@@ -84,8 +86,19 @@ app.post('/adjective', function(req, res) {
 app.get('/verb', function(req, res) {
   res.json(getRandomWord(verb)); //call function from adjective object
 });
+
+app.post('/verb', function(req, res) {
+  console.log(req.body);                    //check in postman. select "POST", Headers "Content-Type" Value "application/json", "raw"       
+  res.json(postRandomWord(req.body.word, verb));  
+});
+
 app.get('/noun', function(req, res) {
   res.json(getRandomWord(noun)); //call function from adjective object
+});
+
+app.post('/noun', function(req, res) {
+  console.log(req.body);                    //check in postman. select "POST", Headers "Content-Type" Value "application/json", "raw"       
+  res.json(postRandomWord(req.body.word, noun));  
 });
 app.listen(port, function() {
   console.log('server started on port ' + port);
