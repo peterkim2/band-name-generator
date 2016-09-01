@@ -1,0 +1,90 @@
+body {
+  background-image: url(http://www.musicappblog.com/wp-content/uploads/2013/07/band-live-graphic.jpg);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 3em;
+  font-size: 3em;
+  color: #7FFF00;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 1.5em;
+  color: #7FFF00;
+}
+
+#submitAdjective {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 1em;
+  color: #F8F8FF;
+}
+
+#submitVerb {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 1em;
+  color: #7FFF00;
+}
+
+#submitNoun {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 1em;
+  color: #7FFF00;
+}
+
+#adjectiveRes {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 1em;
+  color: #7FFF00;
+}
+
+#verbRes {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 1em;
+  color: #7FFF00;
+}
+
+#nounRes {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 1em;
+  color: #7FFF00;
+}
+
+#adjective {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 1.5em;
+  color: #FFFFFF;
+}
+
+#verb {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 2.5em;
+  color: #7FFF00;
+}
+
+#noun {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 2.0em;
+  color: #7FFF00;
+}
+
+#bandname {
+  text-align: center;
+  margin-top: 0em;
+  font-size: 1em;
+  color: #FFFFFF;
+}
+
+
+
